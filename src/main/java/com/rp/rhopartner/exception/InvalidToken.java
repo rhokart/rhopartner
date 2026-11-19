@@ -1,0 +1,15 @@
+package com.rp.rhopartner.exception;
+
+import lombok.Data;
+
+@Data
+public class InvalidToken extends RuntimeException {
+    private String errDescription;
+    private String errmessage;
+
+
+    public InvalidToken(String errmessage, String errDescription) {
+        this.errDescription = errDescription;
+        this.errmessage = errmessage;
+    }
+}
